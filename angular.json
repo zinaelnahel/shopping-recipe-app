@@ -20,7 +20,8 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets","src/_redirects"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -92,6 +93,14 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/my-first-app",
+            "netlifyToken": "JhZRqaVqqYSmJcVdFlUaEIXdGuj7RaY0M0CpCkRLcm8",
+            "siteId": "4fde8e73-0880-41c1-8d7b-5c8970922e15"
           }
         }
       }
